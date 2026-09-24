@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kin · MT-ECO SYSTEM</title>
-  <meta name="theme-color" content="#070b16" />
-  <meta name="description" content="Kin ride dispatch simulation — a node in the MT-ECO SYSTEM by Futuret3ch and MemeTorrent." />
+  <meta name="theme-color" content="#141311" />
+  <meta name="description" content="Kin household ride dispatch — a node in the MT-ECO SYSTEM by Futuret3ch and MemeTorrent." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 </head>
@@ -19,7 +19,7 @@
       <span class="live-pill">SIMULATED · LIVE</span>
     </header>
     <section class="hero">
-      <img class="hero-img" src="covers/hero.jpg" alt="Kin neon city grid — streets and fares are live, simulation only" />
+      <img class="hero-img" src="covers/hero.jpg" alt="Kin city grid — streets and fares are live, simulation only" />
     </section>
     <section class="intro">
       <p class="kicker">A node in the constellation</p>
@@ -31,19 +31,21 @@
       </div>
     </section>
   </div>
+
   <div id="view-suites" class="view hidden">
     <div class="shell">
       <aside class="rail" aria-hidden="true"></aside>
       <main class="content">
         <p class="kicker">developer.kin.app · MT node</p>
         <h1>Select an API Suite</h1>
-        <p class="lede">Pick <strong>Family</strong> to open the live household ride app. Other suites stay on the list so this screen matches the portal you came from.</p>
+        <p class="lede">Pick <strong>Family</strong> to open the household ride app. Other suites stay on the list so this screen still reads as the portal you came from — not a copy of it.</p>
         <div class="recommended">Recommended: <strong>Family</strong> · MT-ECO SYSTEM</div>
         <ul class="suites" role="radiogroup" aria-label="API suites" id="suites"></ul>
         <button type="button" class="next" id="next" disabled>Proceed to Next Step</button>
       </main>
     </div>
   </div>
+
   <div id="view-family" class="view hidden">
     <div class="ride-page">
       <header class="ride-cover">
@@ -62,7 +64,7 @@
         <div class="handle"></div>
         <label class="search">Where to?</label>
         <div class="chips">
-          <button class="chip" type="button">Ride</button>
+          <button class="chip on" type="button">Ride</button>
           <button class="chip" type="button">School</button>
           <button class="chip" type="button">Elder</button>
           <button class="chip" type="button">Pet</button>
@@ -71,7 +73,10 @@
         </div>
         <div class="person">
           <div class="avatar">JO</div>
-          <div><div class="pname">Phone is Jordan</div><div class="role">Parent · can approve</div></div>
+          <div>
+            <div class="pname">Phone is Jordan</div>
+            <div class="role">Parent · can approve</div>
+          </div>
         </div>
         <nav class="nav">
           <button class="on" type="button">Home</button>
@@ -80,7 +85,7 @@
           <button type="button">Family</button>
           <button type="button" id="to-api">API</button>
         </nav>
-        <p class="foot">developed by Futuret3ch · MemeTorrent</p>
+        <p class="foot">developed by Futuret3ch · <a href="https://memetorrent.futuret3ch.com.au/" target="_blank" rel="noreferrer">MemeTorrent</a></p>
       </section>
     </div>
   </div>
