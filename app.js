@@ -1,4 +1,11 @@
-const SUITES = ["FreightCarrierAPITesting","Lending","Shifts 3p Dashcam Integration","Spender Arrears","Uber Ads","UAIS Thriving Spring Testing Suite","Issuance","Rider3PLTesting","Uber Third Party Support","Uber Pay","3PL Consumer APIs","Eats Marketplace","CitiUpiOnboarding","Family","Financial Services","Shifts 3p Integration","Marketplace Signals","CitiCallbackSuiteTest","Uber Insurance Carrier","SDV Network Observability","Earner Background Check","Others"];
+const SUITES = [
+  "FreightCarrierAPITesting","Lending","Shifts 3p Dashcam Integration","Spender Arrears",
+  "Uber Ads","UAIS Thriving Spring Testing Suite","Issuance","Rider3PLTesting",
+  "Uber Third Party Support","Uber Pay","3PL Consumer APIs","Eats Marketplace",
+  "CitiUpiOnboarding","Family","Financial Services","Shifts 3p Integration",
+  "Marketplace Signals","CitiCallbackSuiteTest","Uber Insurance Carrier",
+  "SDV Network Observability","Earner Background Check","Others"
+];
 const list = document.getElementById("suites");
 const next = document.getElementById("next");
 let selected = null;
@@ -28,9 +35,17 @@ function show(id) {
   document.getElementById(id).classList.remove("hidden");
   window.scrollTo(0, 0);
 }
-document.getElementById("enter-sim") && document.getElementById("enter-sim").addEventListener("click", () => show("view-suites"));
-document.getElementById("to-api") && document.getElementById("to-api").addEventListener("click", () => show("view-suites"));
-next && next.addEventListener("click", () => {
+const enter = document.getElementById("enter-sim");
+const toApi = document.getElementById("to-api");
+if (enter) enter.addEventListener("click", () => show("view-suites"));
+if (toApi) toApi.addEventListener("click", () => show("view-suites"));
+if (next) next.addEventListener("click", () => {
   if (selected === "Family") show("view-family");
   else alert(selected + " stays on this list. Pick Family to open the household ride app.");
+});
+document.querySelectorAll(".chip").forEach((chip) => {
+  chip.addEventListener("click", () => {
+    document.querySelectorAll(".chip").forEach((c) => c.classList.remove("on"));
+    chip.classList.add("on");
+  });
 });
