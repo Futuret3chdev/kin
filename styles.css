@@ -9,7 +9,6 @@
   --copper: #9a5a32;
   --btn: #171614;
   --btn-fg: #f4efe6;
-  --radio: #9a5a32;
   --font: "IBM Plex Sans", "Helvetica Neue", system-ui, sans-serif;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -50,15 +49,21 @@ html, body {
   color: #efe8dc;
   border-color: transparent;
 }
+.hero, .ride-cover {
+  background-color: #cbbfa8;
+  background-image:
+    linear-gradient(90deg, rgba(20,19,17,.07) 1px, transparent 1px),
+    linear-gradient(rgba(20,19,17,.07) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
 .hero {
   margin: 0 16px;
   border-radius: 6px;
   overflow: hidden;
-  background: #1a1916;
-  min-height: 220px;
+  min-height: 240px;
   border: 1px solid #cfc6b6;
 }
-.hero-img { display: block; width: 100%; height: auto; min-height: 220px; object-fit: cover; }
+.hero-img { display: block; width: 100%; height: auto; min-height: 240px; object-fit: cover; }
 .intro { max-width: 40rem; margin: 0 auto; padding: 22px 18px 40px; }
 .kicker {
   color: var(--muted);
@@ -127,7 +132,7 @@ h1 em { color: var(--accent); font-style: normal; }
   max-width: 28rem; margin: 0 auto; min-height: 100dvh;
   display: flex; flex-direction: column; background: var(--paper);
 }
-.ride-cover { position: relative; flex: 1; min-height: 240px; background: #cfc6b6; }
+.ride-cover { position: relative; flex: 1; min-height: 240px; }
 .ride-cover img { width: 100%; height: 100%; object-fit: cover; display: block; position: absolute; inset: 0; }
 .ride-cover-meta {
   position: absolute; left: 12px; right: 12px; top: 12px;
